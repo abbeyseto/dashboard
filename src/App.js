@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Reports from "./pages/Reports";
+import Products from "./pages/Products";
+import AppContext from "./context/AppContext";
+import useWindowSize from "./components/Hooks/useWindowSize.js";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isSidebarOpened, setIsSidebarOpened] = useState(false);
+  const size = useWindowSize();
+
+  useEffect(() => {
+    console.log(size.width);
+    size.width < 500 ? setIsMobile(true) : setIsMobile(false);
+    size.width > 500 && setIsSidebarOpened(true);
+  }, [size]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider
+      value={{
+        mobileState: isMobile,
+        sidebarState: isSidebarOpened,
+        setIsMobile: setIsMobile,
+        setIsSidebarOpened: setIsSidebarOpened,
+      }}
+    >
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/reports" component={Reports} />
+          <Route path="/products" component={Products} />
+        </Switch>
+      </Router>
+    </AppContext.Provider>
   );
 }
 
