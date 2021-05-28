@@ -1,8 +1,8 @@
 import React from "react";
-import dashboard from "../assets/icons/dashboard.svg";
-import balances from "../assets/icons/balances.svg";
-import customers from "../assets/icons/customers.svg";
-import analytics from "../assets/icons/analytics.svg";
+import dashboard from "../../assets/icons/dashboard.svg";
+import balances from "../../assets/icons/balances.svg";
+import customers from "../../assets/icons/customers.svg";
+import analytics from "../../assets/icons/analytics.svg";
 
 
 export const SidebarData = [
@@ -31,9 +31,9 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   // {
-  //   title: 'Messages',
-  //   path: '/messages',
-  //   icon: <FaIcons.FaEnvelopeOpenText />,
+  //   title: 'About Us',
+  //   path: '/about-us',
+  //   icon: analytics,
   //   cName: 'nav-text'
   // },
   // {

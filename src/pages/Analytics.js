@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
 import AppContext from '../context/AppContext';
+import CurrentDate from "../components/CurrentDate/date";
 
 function Analytics() {
   const { sidebarState, setIsSidebarOpened } = useContext(AppContext);
   return (
     <div className={sidebarState? 'analytics': 'analytics closed'}>
-      <h1>Analytics</h1>
+      <div className={"header"}>
+      <p >Analytics</p>
+        <CurrentDate/>
+        </div>
     </div>
   );
 }

@@ -1,11 +1,39 @@
-import React, { useContext } from 'react';
-import AppContext from '../context/AppContext';
-
+import React, { useContext } from "react";
+import AppContext from "../context/AppContext";
+import CurrentDate from "../components/CurrentDate/date";
+import Dropdown from "../components/Dropdown/dropdown";
+import Card from "../components/Card/card";
 function Balances() {
   const { sidebarState, setIsSidebarOpened } = useContext(AppContext);
   return (
-    <div className={sidebarState? 'balances': 'balances closed'}>
-      <h1>Balances</h1>
+    <div className={"container"}>
+      <div className={sidebarState ? "balances" : "balances closed"}>
+        <div className={"header"}>
+          <p>Balances</p>
+          <CurrentDate />
+        </div>
+
+        <div className={"card-container"}>
+          <Card
+            positionalClass="left-card"
+            heading={"Total Account Balance"}
+            amount={"5,332.18"}
+            // background={"#F5F5F5"}
+            conversion_rate={"1USD = 381.97NGN"}
+            dropdown={
+              <Dropdown options={["NGN", "USD", "GBP", "YEN"]} width={"80px"} />
+            }
+          />
+          <Card
+            positionalClass="right-card"
+            headingColor="grey"
+            heading="Funds on hold"
+            amount="5,332.18"
+            background="#F5F5F5"
+            dividerWidth="80%"
+          />
+        </div>
+      </div>
     </div>
   );
 }

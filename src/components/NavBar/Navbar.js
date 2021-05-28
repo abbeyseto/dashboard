@@ -3,10 +3,10 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
-import "./Navbar.css";
+import "../NavBar/Navbar.css";
 import { IconContext } from "react-icons";
-import logo from "../assets/images/logo.png";
-import AppContext from "../context/AppContext";
+import logo from "../../assets/images/logo.png";
+import AppContext from "../../context/AppContext";
 
 function Navbar(props) {
   const { sidebarState, setIsSidebarOpened } = useContext(AppContext);
