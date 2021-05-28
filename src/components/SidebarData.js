@@ -8,7 +8,7 @@ import analytics from "../assets/icons/analytics.svg";
 export const SidebarData = [
   {
     title: "Dashboard",
-    path: "/",
+    path: "/dashboard",
     icon: dashboard,
     cName: "nav-text",
   },
