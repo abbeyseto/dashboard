@@ -32,7 +32,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/" exact component={Dashboard} />
+          <Route path="/dashboard" exact component={Dashboard} />
           <Route path="/balances" component={Balances} />
           <Route path="/customers" component={Customers} />
           <Route path="/analytics" component={Analytics} />
