@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from '../context/AppContext';
 
 function Balances() {
+  const { sidebarState, setIsSidebarOpened } = useContext(AppContext);
   return (
-    <div className='balances'>
+    <div className={sidebarState? 'balances': 'balances closed'}>
       <h1>Balances</h1>
     </div>
   );

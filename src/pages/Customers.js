@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from '../context/AppContext';
 
 function Customers() {
+    const { sidebarState, setIsSidebarOpened } = useContext(AppContext);
   return (
-    <div className='customers'>
+    <div className={sidebarState? 'customers': 'customers closed'}>
       <h1>Customers</h1>
     </div>
   );
