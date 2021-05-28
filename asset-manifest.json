@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dashboard/static/css/main.fe20d025.chunk.css",
+    "main.js": "/dashboard/static/js/main.055539ea.chunk.js",
+    "main.js.map": "/dashboard/static/js/main.055539ea.chunk.js.map",
+    "runtime-main.js": "/dashboard/static/js/runtime-main.d8c3ba84.js",
+    "runtime-main.js.map": "/dashboard/static/js/runtime-main.d8c3ba84.js.map",
+    "static/js/2.d804a2ad.chunk.js": "/dashboard/static/js/2.d804a2ad.chunk.js",
+    "static/js/2.d804a2ad.chunk.js.map": "/dashboard/static/js/2.d804a2ad.chunk.js.map",
+    "index.html": "/dashboard/index.html",
+    "static/css/main.fe20d025.chunk.css.map": "/dashboard/static/css/main.fe20d025.chunk.css.map",
+    "static/js/2.d804a2ad.chunk.js.LICENSE.txt": "/dashboard/static/js/2.d804a2ad.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/dashboard/static/media/FoundersGrotesk-Regular.5e8e49c3.otf",
+    "static/media/analytics.05c66e85.svg": "/dashboard/static/media/analytics.05c66e85.svg",
+    "static/media/balances.37d4f9bb.svg": "/dashboard/static/media/balances.37d4f9bb.svg",
+    "static/media/customers.37e63a77.svg": "/dashboard/static/media/customers.37e63a77.svg",
+    "static/media/dashboard.59e19fd3.svg": "/dashboard/static/media/dashboard.59e19fd3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d8c3ba84.js",
+    "static/js/2.d804a2ad.chunk.js",
+    "static/css/main.fe20d025.chunk.css",
+    "static/js/main.055539ea.chunk.js"
+  ]
+}
