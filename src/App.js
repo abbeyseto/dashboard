@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Reports from "./pages/Reports";
-import Products from "./pages/Products";
+import Dashboard from "./pages/Dashboard";
+import Balances from "./pages/Balances";
+import Customers from "./pages/Customers";
 import AppContext from "./context/AppContext";
 import useWindowSize from "./components/Hooks/useWindowSize.js";
+import Analytics from "./pages/Analytics";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -31,9 +32,10 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/reports" component={Reports} />
-          <Route path="/products" component={Products} />
+          <Route path="/" exact component={Dashboard} />
+          <Route path="/balances" component={Balances} />
+          <Route path="/customers" component={Customers} />
+          <Route path="/analytics" component={Analytics} />
         </Switch>
       </Router>
     </AppContext.Provider>

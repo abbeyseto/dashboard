@@ -8,11 +8,12 @@ import { IconContext } from "react-icons";
 import logo from "../assets/images/logo.png";
 import AppContext from "../context/AppContext";
 
-function Navbar() {
+function Navbar(props) {
   const { sidebarState, setIsSidebarOpened } = useContext(AppContext);
   const { mobileState, setIsMobile } = useContext(AppContext);
   const changeSidebarState = () => setIsSidebarOpened(!sidebarState);
-
+  const [selected, setSelected] = useState("Dashboard");
+  console.log(props, window.location.pathname);
   return (
     <>
       <IconContext.Provider value={{ color: "#A6ABB2" }}>
@@ -24,7 +25,7 @@ function Navbar() {
         <nav className={sidebarState ? "nav-menu active" : "nav-menu"}>
           <ul
             className="nav-menu-items"
-            onClick={sidebarState && mobileState ?  changeSidebarState: null}
+            onClick={sidebarState && mobileState ? changeSidebarState : null}
           >
             {sidebarState && mobileState && (
               <li className="navbar-toggle">
@@ -34,11 +35,21 @@ function Navbar() {
               </li>
             )}
             <img src={logo} className={"logo"} />
+            <div className={"menu-subheading"}>Main pages</div>
             {SidebarData.map((item, index) => {
               return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path}>
-                    {item.icon}
+                <li
+                  key={index}
+                  className={item.cName}
+                  onClick={() => setSelected(item.title)}
+                >
+                  <Link
+                    to={item.path}
+                    className={
+                      window.location.pathname === item.path ? "selected" : null
+                    }
+                  >
+                    <img src={item.icon} alt={item.title} />
                     <span>{item.title}</span>
                   </Link>
                 </li>

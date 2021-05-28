@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('./assets/fonts/FoundersGrotesk-Regular.otf') format('otf'),
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Founders Grotesk', sans-serif;
 }
 
-.home,
-.reports,
-.products {
+.dashboard,
+.analytics,
+.balances,
+.customers {
   display: flex;
   height: 90vh;
   align-items: center;
