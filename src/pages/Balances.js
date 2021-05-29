@@ -3,6 +3,7 @@ import AppContext from "../context/AppContext";
 import CurrentDate from "../components/CurrentDate/date";
 import Dropdown from "../components/Dropdown/dropdown";
 import Card from "../components/Card/card";
+import Table from "../components/Table/table";
 function Balances() {
   const { sidebarState, setIsSidebarOpened } = useContext(AppContext);
   return (
@@ -16,10 +17,9 @@ function Balances() {
         <div className={"card-container"}>
           <Card
             positionalClass="left-card"
-            heading={"Total Account Balance"}
-            amount={"5,332.18"}
-            // background={"#F5F5F5"}
-            conversion_rate={"1USD = 381.97NGN"}
+            heading="Total account balance"
+            amount="5,332.18"
+            conversion_rate="1USD = 381.97NGN"
             dropdown={
               <Dropdown options={["NGN", "USD", "GBP", "YEN"]} width={"80px"} />
             }
@@ -32,6 +32,9 @@ function Balances() {
             background="#F5F5F5"
             dividerWidth="80%"
           />
+        </div>
+        <div>
+          <Table/>
         </div>
       </div>
     </div>

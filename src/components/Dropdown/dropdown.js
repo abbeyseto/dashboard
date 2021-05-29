@@ -10,12 +10,13 @@ function Dropdown(props) {
   return (
     <>
       {options && options.length > 0 && (
-        <div >
-          <select className={"options"} style={{width: width}} onChange={(e) => onChangeOption(e)}>
+        <div class="select">
+          <select id="standard-select" style={{width: width}} onChange={(e) => onChangeOption(e)}>
             {options.map((option, index) => {
-              return <option key={index}>{option}</option>;
+              return <option key={index} className={"option"}>{option}</option>;
             })}
           </select>
+          <span class="focus"></span>
         </div>
       )}
     </>
