@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/dashboard/static/css/main.249f4377.chunk.css",
-    "main.js": "/dashboard/static/js/main.08adbe28.chunk.js",
-    "main.js.map": "/dashboard/static/js/main.08adbe28.chunk.js.map",
+    "main.css": "/dashboard/static/css/main.a3a22432.chunk.css",
+    "main.js": "/dashboard/static/js/main.57203588.chunk.js",
+    "main.js.map": "/dashboard/static/js/main.57203588.chunk.js.map",
     "runtime-main.js": "/dashboard/static/js/runtime-main.d8c3ba84.js",
     "runtime-main.js.map": "/dashboard/static/js/runtime-main.d8c3ba84.js.map",
     "static/js/2.8e6f5328.chunk.js": "/dashboard/static/js/2.8e6f5328.chunk.js",
     "static/js/2.8e6f5328.chunk.js.map": "/dashboard/static/js/2.8e6f5328.chunk.js.map",
     "index.html": "/dashboard/index.html",
-    "static/css/main.249f4377.chunk.css.map": "/dashboard/static/css/main.249f4377.chunk.css.map",
+    "static/css/main.a3a22432.chunk.css.map": "/dashboard/static/css/main.a3a22432.chunk.css.map",
     "static/js/2.8e6f5328.chunk.js.LICENSE.txt": "/dashboard/static/js/2.8e6f5328.chunk.js.LICENSE.txt",
     "static/media/App.css": "/dashboard/static/media/FoundersGrotesk-Regular.5e8e49c3.otf",
     "static/media/analytics.05c66e85.svg": "/dashboard/static/media/analytics.05c66e85.svg",
     "static/media/balances.37d4f9bb.svg": "/dashboard/static/media/balances.37d4f9bb.svg",
     "static/media/customers.37e63a77.svg": "/dashboard/static/media/customers.37e63a77.svg",
-    "static/media/dashboard.59e19fd3.svg": "/dashboard/static/media/dashboard.59e19fd3.svg"
+    "static/media/dashboard.59e19fd3.svg": "/dashboard/static/media/dashboard.59e19fd3.svg",
+    "static/media/logo.ce827177.svg": "/dashboard/static/media/logo.ce827177.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d8c3ba84.js",
     "static/js/2.8e6f5328.chunk.js",
-    "static/css/main.249f4377.chunk.css",
-    "static/js/main.08adbe28.chunk.js"
+    "static/css/main.a3a22432.chunk.css",
+    "static/js/main.57203588.chunk.js"
   ]
 }
