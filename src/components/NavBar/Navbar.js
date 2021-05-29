@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -13,7 +13,13 @@ function Navbar(props) {
   const { mobileState, setIsMobile } = useContext(AppContext);
   const changeSidebarState = () => setIsSidebarOpened(!sidebarState);
   const [selected, setSelected] = useState("Dashboard");
-  console.log(props, window.location.pathname);
+  useEffect(() => {
+    let loadedPath = window.location.pathname;
+  console.log(loadedPath);
+    const onLoadSelected = SidebarData.filter((data) => (data.path === loadedPath));
+    console.log(onLoadSelected);
+    setSelected(onLoadSelected.title);
+  }, []);
   return (
     <>
       <IconContext.Provider value={{ color: "#A6ABB2" }}>
@@ -46,7 +52,10 @@ function Navbar(props) {
                   <Link
                     to={item.path}
                     className={
-                      window.location.pathname === item.path ? "selected" : null
+                      window.location.pathname === item.path ||
+                      selected === item.title
+                        ? "selected"
+                        : null
                     }
                   >
                     <img src={item.icon} alt={item.title} />

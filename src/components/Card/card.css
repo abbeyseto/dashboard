@@ -57,6 +57,7 @@
   .right-card {
     left: 0px;
     position: unset;
+    margin-top: 10px;
   }
 
   .left-card {

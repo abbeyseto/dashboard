@@ -1,15 +1,14 @@
-import React, { useContext } from 'react';
-import AppContext from '../context/AppContext';
-import CurrentDate from "../components/CurrentDate/date";
+import React, { useContext } from "react";
+import AppContext from "../context/AppContext";
+import Header from "../components/Header/header";
 
 function AboutUS() {
-    const { sidebarState, setIsSidebarOpened } = useContext(AppContext);
+  const { sidebarState } = useContext(AppContext);
   return (
-    <div className={sidebarState? 'aboutus': 'aboutus closed'}>
-      <div className={"header"}>
-      <p >AboutUS</p>
-        <CurrentDate/>
-        </div>
+    <div className={"container"}>
+      <div className={sidebarState ? "aboutus" : "aboutus closed"}>
+        <Header heading="AboutUS" />
+      </div>
     </div>
   );
 }

@@ -1,19 +1,15 @@
 import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
-import CurrentDate from "../components/CurrentDate/date";
 import Dropdown from "../components/Dropdown/dropdown";
 import Card from "../components/Card/card";
 import Table from "../components/Table/table";
+import Header from "../components/Header/header";
 function Balances() {
-  const { sidebarState, setIsSidebarOpened } = useContext(AppContext);
+  const { sidebarState } = useContext(AppContext);
   return (
     <div className={"container"}>
       <div className={sidebarState ? "balances" : "balances closed"}>
-        <div className={"header"}>
-          <p>Balances</p>
-          <CurrentDate />
-        </div>
-
+        <Header heading="Balances" />
         <div className={"card-container"}>
           <Card
             positionalClass="left-card"
@@ -21,7 +17,7 @@ function Balances() {
             amount="5,332.18"
             conversion_rate="1USD = 381.97NGN"
             dropdown={
-              <Dropdown options={["NGN", "USD", "GBP", "YEN"]} width={"80px"} />
+              <Dropdown width={"80px"} />
             }
           />
           <Card
@@ -34,7 +30,7 @@ function Balances() {
           />
         </div>
         <div>
-          <Table/>
+          <Table />
         </div>
       </div>
     </div>

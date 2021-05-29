@@ -1,26 +1,35 @@
 import React, { useState } from "react";
-import "./dropdown.css";
-function Dropdown(props) {
-  const { options, width } = props;
-  const [selected, setSelected] = useState(null);
+import Select from "react-select";
 
-  const onChangeOption = (e) => {
-    setSelected(e.target.value);
-  };
+export default function Dropdown(props) {
+  console.log(props);
+  const currency = [
+    { value: "NGN", label: "NGN" },
+    { value: "USD", label: "USD" },
+    { value: "GBP", label: "GBP" },
+    { value: "YEN", label: "YEN" },
+  ];
+
   return (
-    <>
-      {options && options.length > 0 && (
-        <div class="select">
-          <select id="standard-select" style={{width: width}} onChange={(e) => onChangeOption(e)}>
-            {options.map((option, index) => {
-              return <option key={index} className={"option"}>{option}</option>;
-            })}
-          </select>
-          <span class="focus"></span>
-        </div>
-      )}
-    </>
+    <Select
+      closeMenuOnSelect={true}
+      // components={{ Option }}
+      styles={{
+        option: (base) => ({
+          ...base,
+          border: "1px solid #EBEBEB",
+          borderRadius: "4px",
+          height: "90%",
+        }),
+        control: () => ({
+          borderRadius: "5px",
+          background: "#F5F5F5",
+          width: "70px",
+          display: "flex",
+        }),
+      }}
+      defaultValue={currency[0]}
+      options={currency}
+    />
   );
 }
-
-export default Dropdown;
