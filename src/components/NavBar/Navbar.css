@@ -17,7 +17,7 @@
 }
 
 .nav-menu {
-  background-color: #e5e5e5;
+  background-color: #ebebeb;
   width: 280px;
   height: 100vh;
   display: flex;
@@ -57,12 +57,12 @@
 }
 
 .nav-text a:hover {
-  background-color: #fff;
+  background-color: #FFF;
 }
 
 .selected {
   color: #000 !important;
-  background-color: #fff;
+  background-color: #F5F5F5;
 }
 .nav-menu-items {
   width: 280px;

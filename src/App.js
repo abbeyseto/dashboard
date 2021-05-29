@@ -17,8 +17,8 @@ function App() {
 
   useEffect(() => {
     console.log(size.width);
-    size.width < 500 ? setIsMobile(true) : setIsMobile(false);
-    size.width > 500 && setIsSidebarOpened(true);
+    size.width < 600 ? setIsMobile(true) : setIsMobile(false);
+    size.width > 600 && setIsSidebarOpened(true);
   }, [size]);
 
   return (

@@ -56,7 +56,7 @@
 @media screen and (max-width: 600px) {
   .right-card {
     left: 0px;
-    position: none;
+    position: unset;
   }
 
   .left-card {
