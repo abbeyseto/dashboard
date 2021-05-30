@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { SidebarData } from "./SidebarData";
+import { SidebarData, SidebarDataExtra } from "./SidebarData";
 import "../NavBar/Navbar.css";
 import { IconContext } from "react-icons";
 import logo from "../../assets/images/logo.svg";
@@ -45,6 +45,29 @@ function Navbar(props) {
             <img src={logo} className={"logo"} alt="logo"/>
             <div className={"menu-subheading"}>Main pages</div>
             {SidebarData.map((item, index) => {
+              return (
+                <li
+                  key={index}
+                  className={item.cName}
+                  onClick={() => setSelected(item.title)}
+                >
+                  <Link
+                    to={item.path}
+                    className={
+                      window.location.pathname === item.path ||
+                      selected === item.title
+                        ? "selected"
+                        : null
+                    }
+                  >
+                    <img src={item.icon} alt={item.title} />
+                    <span>{item.title}</span>
+                  </Link>
+                </li>
+              );
+            })}
+            <div className={"menu-subheading"}>General</div>
+            {SidebarDataExtra.map((item, index) => {
               return (
                 <li
                   key={index}

@@ -4,11 +4,9 @@ import Navbar from "./components/NavBar/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Balances from "./pages/Balances";
-import Customers from "./pages/Customers";
 import AppContext from "./context/AppContext";
+import UnderConstruction from "./pages/UnderConstruction";
 import useWindowSize from "./components/Hooks/useWindowSize.js";
-import Analytics from "./pages/Analytics";
-// import AboutUS from "./pages/AboutUS";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -32,11 +30,34 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/balances" exact component={Balances} />
-          <Route path="/dashboard"  component={Dashboard} />
-          <Route path="/customers" component={Customers} />
-          <Route path="/analytics" component={Analytics} />
-          {/* <Route path="/about-us" component={AboutUS} /> */}
+          <Route path="/dashboard" exact component={Dashboard} />
+          <Route path="/balances" component={Balances} />
+          <Route
+            path="/customers"
+            component={() => <UnderConstruction heading={`Customers`} />}
+          />
+          <Route
+            path="/analytics"
+            component={() => <UnderConstruction heading={`Analytics`} />}
+          />
+          <Route
+            exact
+            path="/settings"
+            component={() => <UnderConstruction heading={`Settings`} />}
+          />
+          <Route
+            path="/teams"
+            component={() => <UnderConstruction heading={`Team`} />}
+          />
+          <Route
+            path="/contacts"
+            component={() => <UnderConstruction heading={`Contact`} />}
+          />
+          <Route
+            exact
+            path="/logout"
+            component={() => <UnderConstruction heading={`Logout`} />}
+          />
         </Switch>
       </Router>
     </AppContext.Provider>
