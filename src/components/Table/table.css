@@ -33,6 +33,7 @@
 .responsive-table .col-4 {
   padding: 7px;
   margin: 5px;
+  width: 40%;
 }
 
 .table-header {
@@ -64,6 +65,11 @@
   padding: 20px;
   font-size: 18px;
 }
+
+.right{
+  padding-left: 10% !important;
+  width: 20% !important;
+}
 @media all and (max-width: 600px) {
   .table-container {
     display: block;
@@ -87,6 +93,9 @@
     display: flex;
     padding: 10px 0;
   }
+  .right{
+    padding-left: 0px !important;
+  }
   .responsive-table .col:before {
     color: #6c7a89;
     padding-right: 10px;
@@ -95,5 +104,8 @@
   }
   .responsive-table .table-row {
     box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 10%);
+  }
+  .responsive-table .col-4 {
+    width: 300px !important;
   }
 }

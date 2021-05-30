@@ -2,7 +2,7 @@ import React from "react";
 import { tableData } from "./tableData";
 import "./table.css";
 function Table() {
-  const [pagination, setPagination] = React.useState(3);
+  const [pagination, setPagination] = React.useState(4);
   const [disable, setDisable] = React.useState(false);
 
   const PageData = () => {
@@ -22,7 +22,7 @@ function Table() {
           <div className="col col-4" data-label="Date">
             {data.date}
           </div>
-          <div className="col col-4" data-label="Amount">
+          <div className="col col-4 right" data-label="Amount">
             {data.amount}
           </div>
         </li>
@@ -38,7 +38,7 @@ function Table() {
           <div className="col col-4">Payout ID</div>
           <div className="col col-4">Source</div>
           <div className="col col-4">Date </div>
-          <div className="col col-4">Amount</div>
+          <div className="col col-4 right">Amount</div>
         </li>
         <PageData />
       </ul>
