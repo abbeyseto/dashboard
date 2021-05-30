@@ -8,7 +8,7 @@ import Customers from "./pages/Customers";
 import AppContext from "./context/AppContext";
 import useWindowSize from "./components/Hooks/useWindowSize.js";
 import Analytics from "./pages/Analytics";
-import AboutUS from "./pages/AboutUS";
+// import AboutUS from "./pages/AboutUS";
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);

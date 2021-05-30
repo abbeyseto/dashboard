@@ -4,6 +4,7 @@ import Dropdown from "../components/Dropdown/dropdown";
 import Card from "../components/Card/card";
 import Table from "../components/Table/table";
 import Header from "../components/Header/header";
+import TableWrapper from "../components/TableWrapper"
 function Balances() {
   const { sidebarState } = useContext(AppContext);
   return (
@@ -29,7 +30,8 @@ function Balances() {
             dividerWidth="80%"
           />
         </div>
-        <div>
+        <div className={"table-container"}>
+          <TableWrapper/>
           <Table />
         </div>
       </div>

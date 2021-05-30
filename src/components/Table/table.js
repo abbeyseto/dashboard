@@ -1,7 +1,36 @@
 import React from "react";
 import { tableData } from "./tableData";
 import "./table.css";
-function Table(props) {
+function Table() {
+  const [pagination, setPagination] = React.useState(3);
+  const [disable, setDisable] = React.useState(false);
+
+  const PageData = () => {
+    var size = pagination;
+    if (size > tableData.length) {
+      setDisable(true);
+    }
+    let result = tableData.slice(0, size).map((data, index) => {
+      return (
+        <li className="table-row" key={index}>
+          <div className="col col-4" data-label="Payout ID">
+            {data.id}
+          </div>
+          <div className="col col-4" data-label="Source">
+            {data.source}
+          </div>
+          <div className="col col-4" data-label="Date">
+            {data.date}
+          </div>
+          <div className="col col-4" data-label="Amount">
+            {data.amount}
+          </div>
+        </li>
+      );
+    });
+    return result;
+  };
+
   return (
     <div className="table-container">
       <ul className="responsive-table">
@@ -11,26 +40,19 @@ function Table(props) {
           <div className="col col-4">Date </div>
           <div className="col col-4">Amount</div>
         </li>
-
-        {tableData.map((data, index) => {
-          return (
-            <li className="table-row" key={index}>
-              <div className="col col-4" data-label="Payout ID">
-                {data.id}
-              </div>
-              <div className="col col-4" data-label="Source">
-                {data.source}
-              </div>
-              <div className="col col-4" data-label="Date">
-                {data.date}
-              </div>
-              <div className="col col-4" data-label="Amount">
-                {data.amount}
-              </div>
-            </li>
-          );
-        })}
+        <PageData />
       </ul>
+      {disable ? (
+        <div className="no-more">No more Results...</div>
+      ) : (
+        <button
+          onClick={() => setPagination(pagination + 3)}
+          disabled={disable}
+          className="see-more"
+        >
+          See More
+        </button>
+      )}
     </div>
   );
 }

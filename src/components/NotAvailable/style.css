@@ -1,0 +1,29 @@
+.not-available {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.na-image {
+  width: 45px;
+  height: 260px;
+  transform: rotate(280deg);
+  filter: grayscale(100%);
+  opacity: 0.4;
+}
+.na-heading {
+  font-size: 18px;
+  color: #3d8f83;
+  margin: 30px 0px;
+}
+.na-body {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 600px) {
+  .na-image {
+    transform: rotate(325deg);
+    margin-top: 100px;
+  }
+}

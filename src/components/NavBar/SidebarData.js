@@ -1,4 +1,3 @@
-import React from "react";
 import dashboard from "../../assets/icons/dashboard.svg";
 import balances from "../../assets/icons/balances.svg";
 import customers from "../../assets/icons/customers.svg";

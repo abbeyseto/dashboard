@@ -10,16 +10,18 @@ import AppContext from "../../context/AppContext";
 
 function Navbar(props) {
   const { sidebarState, setIsSidebarOpened } = useContext(AppContext);
-  const { mobileState, setIsMobile } = useContext(AppContext);
+  const { mobileState } = useContext(AppContext);
   const changeSidebarState = () => setIsSidebarOpened(!sidebarState);
   const [selected, setSelected] = useState("Dashboard");
+
   useEffect(() => {
     let loadedPath = window.location.pathname;
-  console.log(loadedPath);
-    const onLoadSelected = SidebarData.filter((data) => (data.path === loadedPath));
-    console.log(onLoadSelected);
+    const onLoadSelected = SidebarData.filter(
+      (data) => data.path === loadedPath
+    );
     setSelected(onLoadSelected.title);
   }, []);
+
   return (
     <>
       <IconContext.Provider value={{ color: "#A6ABB2" }}>
@@ -40,7 +42,7 @@ function Navbar(props) {
                 </Link>
               </li>
             )}
-            <img src={logo} className={"logo"} />
+            <img src={logo} className={"logo"} alt="logo"/>
             <div className={"menu-subheading"}>Main pages</div>
             {SidebarData.map((item, index) => {
               return (

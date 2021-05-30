@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment'
-function CurrentDate(props) {
+function CurrentDate() {
     return (
         <div className={"date"}>
             {moment().format("[Today, ] Do MMMM YYYY")}
