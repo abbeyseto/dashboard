@@ -10,7 +10,7 @@ import Logout from "../../assets/icons/Logout.svg";
 export const SidebarData = [
   {
     title: "Dashboard",
-    path: "/dashboard",
+    path: "/",
     icon: dashboard,
     cName: "nav-text",
   },

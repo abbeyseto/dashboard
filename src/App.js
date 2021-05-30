@@ -30,7 +30,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/dashboard" exact component={Dashboard} />
+          <Route path="/" exact component={Dashboard} />
           <Route path="/balances" component={Balances} />
           <Route
             path="/customers"
